@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Turner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        background-color:white;
+    }
+    </style>
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <a class="active" hx-get="home.html" hx-push-url="true" hx-target="#content">Home</a>
+            <a hx-get="blog.html" hx-push-url="true" hx-target="#content">Blog</a>
+            <a hx-get="projects.html" hx-push-url="true" hx-target="#content">Projects</a>
+            <a hx-get="contact.html" hx-push-url="true" hx-target="#content">Contact</a>
+
+        </div>
+        <div id="content" hx-get="home.html" hx-trigger="load">
+        </div>
+    </div>
+</body>
+
+</html>

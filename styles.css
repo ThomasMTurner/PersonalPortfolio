@@ -1,0 +1,117 @@
+.main {
+    display: flex;
+    overflow:auto;
+    height:100vh;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.bio {
+    display: flex;
+    position:relative;
+    max-width:80%;
+    top: 15%;
+    text-align: left;
+    flex-direction:column;
+    font-family: helvetica;
+    gap: 1rem;
+
+}
+
+
+.bio h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: darkgray;
+    text-decoration:underline;
+    text-underline-offset:0.4rem;
+    text-decoration-thickness:0.2rem;
+}
+
+
+.bio h2 {
+    font-size: 1rem;
+    font-weight: 200;
+    color: black;
+    font-family:helvetica;
+    max-width:80%;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+.bio h3 {
+    font-size:1.2rem;
+    color:black;
+    
+}
+
+.bio h4 {
+    font-size:0.9rem;
+    font-weight:100;
+    color: black;
+    max-width:80%;
+}
+
+.work-section {
+    display:flex;
+    flex-direction: row;
+}
+
+.sub-work-section {
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    text-align:left;
+    width:100%;
+}
+
+.side-work-section{
+    display: flex;
+    flex-direction:column;
+    text-align:right;
+}
+
+
+.navbar {
+    display: flex;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    flex-direction: row;
+    gap: 2rem;
+    background-color:darkgray;
+    overflow-y: hidden;
+    z-index:1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar a {
+    padding: 1.2rem;
+    font-family:helvetica;
+    font-weight:200;
+    transition: all 0.1s ease-in-out;
+
+
+}
+
+.navbar a:hover{
+    cursor:pointer;
+    background-color:black;
+    color:white;
+
+
+}
+
+.blog-container {
+    display: flex;
+}
+
+.blog-container > h1 {
+    font-size:10rem;
+
+}
