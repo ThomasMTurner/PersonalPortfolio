@@ -6,14 +6,15 @@
 
 .top-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
+
 
 .bio {
     display: flex;
     position:relative;
     max-width:80%;
-    top: 15%;
+    top: 5%;
     text-align: left;
     flex-direction:column;
     font-family: helvetica;
@@ -94,17 +95,23 @@
     padding: 1.2rem;
     font-family:helvetica;
     font-weight:200;
-    transition: all 0.1s ease-in-out;
-
-
+    transition: all 0.2s ease-in-out;
+    color: gray;
+    font-weight: bold;
+    text-decoration:none;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.15rem;
 }
 
 .navbar a:hover{
     cursor:pointer;
-    background-color:black;
-    color:white;
+    text-decoration: underline;
+    color: black;
+}
 
-
+.active {
+    font-weight: bold;
+    color: black;
 }
 
 .blog-container {

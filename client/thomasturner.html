@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Turner</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        background-color:white;
+    }
+    </style>
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <a hx-get="home.html" hx-push-url="true" hx-target="#content" href="home.html" >Home</a>
+            <a hx-get="blog.html" hx-push-url="true" hx-target="#content" href="blog.html">Blog</a>
+            <a hx-get="projects.html" hx-push-url="true" hx-target="#content" href="projects.html">Projects</a>
+            <a hx-get="contact.html" hx-push-url="true" hx-target="#content" href="contact.html">Contact</a>
+        </div>
+        <div id="content" hx-get="home.html" hx-trigger="load">
+        </div>
+    </div>
+    <script>
+    // Function to add 'active' class to current page link
+    function setActiveNavLink() {
+        const navLinks = document.querySelectorAll('.navbar a');
+        const currentPage = window.location.pathname.split('/').pop().split('.')[0];
+
+
+        navLinks.forEach(link => {
+            console.log("Checking link", link)
+            const linkPage = link.getAttribute('href').split('/').pop().split('.')[0];
+            if (linkPage === currentPage) {
+                console.log("Link is active")
+                link.classList.add('active');
+            } else {
+                console.log("Link is not active")
+                console.log(linkPage, currentPage)
+                link.classList.remove('active');
+            }
+        });
+    }
+    
+    document.body.addEventListener('htmx:afterOnLoad', setActiveNavLink);
+    </script>
+   </body>
+</body>
+  
+
+
+</html>
